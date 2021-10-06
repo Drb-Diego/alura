@@ -1,0 +1,24 @@
+/*
+  Reset Basico | config a pagina
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: sans-serif;
+  height: 100%;
+}
+/**/
+
+section{
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}

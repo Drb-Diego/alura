@@ -1,0 +1,37 @@
+/*
+  Estilizando o container do form
+*/
+#container-form {
+  border: 1px solid grey;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+  Estilizando os inputs
+*/
+.input {
+  margin: 10px 0;
+}
+
+/*
+  Estilizando a div dos checkbox
+*/
+#checkbox-input {
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+/*
+  Estilizando o titulo
+*/
+
+#titulo-form {
+  font-family: sans-serif;
+  align-self: center;
+}

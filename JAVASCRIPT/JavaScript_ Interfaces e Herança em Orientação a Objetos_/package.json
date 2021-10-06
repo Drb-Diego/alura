@@ -1,0 +1,14 @@
+{
+  "name": "bytebank",
+  "version": "1.0.0",
+  "description": "Projeto do curso da alura, Javascript orientado a objeto",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Diego Brito",
+  "license": "ISC",
+  "type": "module"
+} 
+
+
