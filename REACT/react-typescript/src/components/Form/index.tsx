@@ -1,9 +1,10 @@
 import Button from '../Button';
+import style from './style.module.scss';
 
 function Form() {
   return (
-    <form>
-      <div>
+    <form className={style.novaTarefa}>
+      <div className={style.inputContainer}>
         <label htmlFor='task'>Tarefa</label>
         <input
           type='text'
@@ -14,7 +15,7 @@ function Form() {
         />
       </div>
 
-      <div>
+      <div className={style.inputContainer}>
         <label>Tempo</label>
         <input
           type='time'
