@@ -28,7 +28,7 @@ function Form() {
         />
       </div>
 
-      <Button />
+      <Button>Adicionar</Button>
     </form>
   );
 }
