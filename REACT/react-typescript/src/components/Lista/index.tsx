@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Item from '../Item';
+import Item from '../ItemList';
 import style from './style.module.scss';
 
 function Lista() {

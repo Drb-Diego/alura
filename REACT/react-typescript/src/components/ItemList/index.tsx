@@ -7,7 +7,7 @@ interface ItemProps {
   time: string;
 }
 
-function Item({ title, time }: ItemProps) {
+function ItemList({ title, time }: ItemProps) {
   return (
     <li className={style.item}>
       <h3>{title}</h3>
@@ -16,4 +16,4 @@ function Item({ title, time }: ItemProps) {
   );
 }
 
-export default Item;
+export default ItemList;
