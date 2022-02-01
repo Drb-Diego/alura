@@ -1,12 +1,13 @@
-import style from './styles.module.scss';
+import style from "./styles.module.scss";
 
 interface ButtonProps {
   children: string;
+  type?: "button" | "submit" | "reset" | undefined;
 }
 
-function Button({ children }: ButtonProps) {
+function Button({ children, type = "button" }: ButtonProps) {
   return (
-    <button type='submit' className={style.botao}>
+    <button type={type} className={style.botao}>
       {children}
     </button>
   );

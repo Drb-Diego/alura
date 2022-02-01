@@ -1,32 +1,38 @@
-import { FormEvent, useState } from 'react';
-import Button from '../Button';
-import style from './style.module.scss';
+import { Dispatch, FormEvent, SetStateAction, useState } from "react";
+import { TasksTypes } from "../../types/tasks";
+import Button from "../Button";
+import style from "./style.module.scss";
 
+interface FormProps {
+  tasks: Array<TasksTypes>;
+  setTasks: Dispatch<SetStateAction<Array<TasksTypes>>>
+}
 
-function Form() {
+function Form({ tasks, setTasks }: FormProps) {
   const [taskAndTime, setTaskAndTime] = useState({
-    task: '',
-    time: '00:00:00',
+    title: "",
+    time: "00:00:00",
   });
 
-  function handleSubmit(event: FormEvent){
+  function handleSubmit(event: FormEvent) {
     event.preventDefault();
-    console.log(taskAndTime);
+
+    setTasks([...tasks, {...taskAndTime}])
   }
 
   return (
     <form className={style.novaTarefa} onSubmit={handleSubmit}>
       <div className={style.inputContainer}>
-        <label htmlFor='task'>Tarefa</label>
+        <label htmlFor="task">Tarefa</label>
         <input
-          type='text'
-          id='task'
-          placeholder='O que vc quer estudar'
-          name='task'
+          type="text"
+          id="task"
+          placeholder="O que vc quer estudar"
+          name="task"
           onChange={({ target: { value } }) =>
-            setTaskAndTime({ ...taskAndTime, task: value })
+            setTaskAndTime({ ...taskAndTime, title: value })
           }
-          value={taskAndTime.task}
+          value={taskAndTime.title}
           required
         />
       </div>
@@ -34,21 +40,21 @@ function Form() {
       <div className={style.inputContainer}>
         <label>Tempo</label>
         <input
-          type='time'
-          step='1'
-          name='time'
-          id='time'
-          min='00:00:00'
-          max='01:30:00'
+          type="time"
+          step="1"
+          name="time"
+          id="time"
+          min="00:00:00"
+          max="01:30:00"
           value={taskAndTime.time}
           onChange={({ target: { value } }) =>
-            setTaskAndTime({ ...taskAndTime, time:value })
+            setTaskAndTime({ ...taskAndTime, time: value })
           }
           required
         />
       </div>
 
-      <Button>Adicionar</Button>
+      <Button type="submit">Adicionar</Button>
     </form>
   );
 }

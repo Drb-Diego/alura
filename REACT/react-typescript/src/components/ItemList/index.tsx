@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import style from '../Lista/style.module.scss';
+import style from "../Lista/style.module.scss";
 
 interface ItemProps {
   title: string;

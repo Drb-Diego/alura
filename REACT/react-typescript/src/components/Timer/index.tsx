@@ -1,7 +1,7 @@
-import Button from '../Button';
-import Watch from '../Watch';
+import Button from "../Button";
+import Watch from "../Watch";
 
-import style from './style.module.scss';
+import style from "./style.module.scss";
 
 function Timer() {
   return (
@@ -12,7 +12,7 @@ function Timer() {
         <Watch />
       </div>
 
-      <Button>Começar !</Button>
+      <Button type="button">Começar !</Button>
     </div>
   );
 }
