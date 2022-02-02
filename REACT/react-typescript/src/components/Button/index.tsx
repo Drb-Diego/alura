@@ -1,7 +1,7 @@
 import style from "./styles.module.scss";
 
 interface ButtonProps {
-  children: string;
+  children?: string;
   type?: "button" | "submit" | "reset" | undefined;
 }
 
